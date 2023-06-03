@@ -1,0 +1,34 @@
+Full Stack Assignment
+
+Use Case:
+
+You have 30 chemical compounds with you and their details.
+Details Include:
+1) Name
+2) Image
+3) Description
+
+You were asked multiple times for these details by your fellow mates so you decided to build a web app for this so that people can directly look into the compounds from webapp.
+Also enable edit of details in case someone wants to change the information.
+
+Front End Task:
+1) Make a card view with all the compound names and their images as separate cards.
+2) Use Pagination.
+3) (Use Routing) On click of each card change the route to a page to display the relevant compound details:
+ Compound Name
+ Compound Image
+ Description
+4) You have liberty to use CSS and make it as attractive as you can (Bonus Points).
+
+Backend Task:
+1) Make CRUD API to access/edit Compound list and details.
+2) Make db table to access/store the given data.(data provided in csv format from easy Import)
+
+
+
+Tech Expectations:
+1) You have to create an angular webapp
+2) You have to use ExpressJS framework to develop API's
+3) You have to use sequelize ORM
+4) You have to use MYsql Database
+5) CSV is attached, you are expected to import data unto table
