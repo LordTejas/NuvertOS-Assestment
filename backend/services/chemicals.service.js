@@ -1,5 +1,4 @@
 const db = require('../models');
-console.log(db);
 
 // Chemical Model
 const Chemical = db.sequelize.models.chemical;

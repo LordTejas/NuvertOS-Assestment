@@ -1,0 +1,8 @@
+# Run the given query in myadmin
+
+LOAD DATA INFILE 'C:\Users\tejas\Projects\NuvertOS\chemicals.csv'
+INTO TABLE chemicals
+FIELDS TERMINATED BY ','
+IGNORE 1 ROWS
+(@dummy, id, CompoundName, CompounrDescription, @dummy, @dummy);
+
