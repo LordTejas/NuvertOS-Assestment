@@ -25,7 +25,6 @@ Backend Task:
 2) Make db table to access/store the given data.(data provided in csv format from easy Import)
 
 
-
 Tech Expectations:
 1) You have to create an angular webapp
 2) You have to use ExpressJS framework to develop API's
