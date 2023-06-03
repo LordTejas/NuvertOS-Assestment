@@ -1,5 +1,5 @@
 const app = require("./app");
 
 app.listen(8082, () => {
-    console.log(`Server listening on port ${config.port}`);
+    console.log(`Server listening on port 8082`);
 })

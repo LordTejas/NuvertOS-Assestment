@@ -27,7 +27,7 @@ sequelize
 const db = {};
 
 db.Sequelize = Sequelize;
-db.Sequelize = sequelize;
+db.sequelize = sequelize;
 
 db.chemicals = require("./chemical.model.js")(sequelize, DataTypes);
 

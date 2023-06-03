@@ -1,8 +1,12 @@
+const db = require('../models');
+console.log(db);
+
 // Chemical Model
-const Chemical = require('../models').chemicals;
+const Chemical = db.sequelize.models.chemical;
 
 const findAll = async () => {
-    const result = await Chemical.findAll();
+    console.log(Chemical)
+    const result = await Chemical.findAll({});
     return result;
 };
 

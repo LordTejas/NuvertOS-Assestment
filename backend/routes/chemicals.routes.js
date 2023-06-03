@@ -6,4 +6,6 @@ const chemicalsController = require('../controllers').chemicalsController;
 router.get('/',
   chemicalsController.getAllChemicals);
 
+router.get('/:chemicalId', chemicalsController.getChemicalById);
+
 module.exports = router;
