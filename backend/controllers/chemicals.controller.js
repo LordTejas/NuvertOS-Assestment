@@ -25,7 +25,34 @@ const getChemicalById = catchAsync(async (req, res) => {
     res.status(httpStatus.OK).send(result);
 });
 
+const createChemical = catchAsync(async (req, res) => {
+    const { name, description, image } = req.body;
+
+    const chemical = await chemicalsService.create({
+        name,
+        description,
+        image
+    });
+
+    res.status(httpStatus.CREATED).send(chemical);
+})
+
+const deleteChemical = catchAsync(async (req, res) => {
+    const pk = req.params.chemicalId;
+
+    const record = await chemicalsService.findById(pk);
+    if (!record) {
+        throw new ApiError(httpStatus.NOT_FOUND, "Chemical with id: " + pk + " not found!");
+    }
+
+    const chemical = await chemicalsService.destroy(pk);
+
+    res.status(httpStatus.NO_CONTENT).send();
+})
+
 module.exports = {
     getAllChemicals,
     getChemicalById,
+    createChemical,
+    deleteChemical,
 };

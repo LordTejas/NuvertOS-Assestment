@@ -8,4 +8,10 @@ router.get('/',
 
 router.get('/:chemicalId', chemicalsController.getChemicalById);
 
+router.post('/', 
+  chemicalsController.createChemical);
+
+router.delete('/:chemicalId', 
+chemicalsController.deleteChemical);
+
 module.exports = router;

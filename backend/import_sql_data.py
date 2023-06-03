@@ -22,6 +22,12 @@ df = pd.read_csv(csv_file)
 # Prepare the INSERT statement with placeholders
 sql = "INSERT INTO chemicals (name, image, description) VALUES (%s, %s, %s)"
 
+# Truncate the database before inserting the same fields
+print("[CLEAN] Truncating chemicals table...")
+with connection.cursor() as cursor:
+    cursor.execute('TRUNCATE TABLE chemicals')
+connection.commit()
+
 # Iterate over the rows and execute parameterized INSERT statements
 for index, row in df.iterrows():
     compound_name = row.iloc[1]
@@ -37,3 +43,4 @@ for index, row in df.iterrows():
 
 # Close the database connection
 connection.close()
+print("[DONE] Insertion Completed Successfully!")
